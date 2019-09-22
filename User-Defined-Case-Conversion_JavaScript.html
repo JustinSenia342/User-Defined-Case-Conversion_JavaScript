@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--Justin Senia-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>User-Defined-Case-Conversion_JavaScript.html</title>
+
+	<script>
+
+		function changeCase() {
+		//alert("changecase(): " + document.getElementById("userIn").value);
+		var userString = document.getElementById("userIn").value;
+	
+		var radioIn = document.getElementsByName('changeCase');
+	
+		if (radioIn[0].checked == true)
+			userString = userString.toUpperCase();
+	
+		else if (radioIn[1].checked == true)
+			userString = userString.toLowerCase();
+	
+		document.getElementById("jsOut").value = userString;
+	
+		}
+	
+	</script>
+
+</head>
+
+<body>
+
+	<form>
+
+		<p>
+			User Input: <input type="text" id="userIn" value="User Input">
+		</p>
+	
+		<p>Make a selection (choose one): <br />
+			Make Input Upper-Case <input type="radio" name="changeCase" id="uCase">
+			Make Input Lower-Case <input type="radio" name="changeCase" id="lCase">
+		</p>
+
+	</form>
+
+	
+	<p>
+		<button onClick="changeCase();"> Change User Input Case </button>
+	</p>
+
+	<p>
+		Javascript Output: <input type="text" id="jsOut" value="User Output">
+	</p>
+	
+</body>
+
+
+</html>
